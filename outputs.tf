@@ -1,9 +1,9 @@
 output "arn" {
-  description = "the ARN of the table"
-  value = "${aws_dynamodb_table.dynamodb_table.arn}"
+  description = "The ARN of the table created"
+  value       = aws_dynamodb_table.this.arn
 }
 
 output "name" {
-  description = "the name of the table"
-  value = "${aws_dynamodb_table.dynamodb_table.id}"
+  description = "The name of the table created"
+  value       = aws_dynamodb_table.this.id
 }
