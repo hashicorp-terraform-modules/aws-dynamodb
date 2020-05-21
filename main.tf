@@ -12,5 +12,5 @@ resource "aws_dynamodb_table" "this" {
     type = "S"
   }
 
-  tags = merge({ Name : var.name }, { Environment : var.environment }, var.tags)
+  tags = merge({ Name : var.name }, var.tags)
 }

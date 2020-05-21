@@ -31,7 +31,6 @@ module "dynamodb_example" {
   source = "git@github.com:hashicorp-terraform-modules/aws-dynamodb.git?ref=v0.0.0"
 
   name                          = "my-dynamodb-table"
-  environment                   = "testing"
   hash_key                      = "MyHashKey"
 }
 ```
@@ -44,7 +43,6 @@ module "dynamodb_example" {
 |------|-------------|:----:|:-----:|:-----:|
 | billing\_mode | Controls how services are charged for read and write throughput and how capacity is managed. (valid values: PROVISIONED and PAY\_PER\_REQUEST. | string | PROVISIONED | No |
 | encryption | Whether or not to enable encryption at rest using an AWS or Customer managed KMS key. If enabled is 'false' then server-side encryption (SSE) is set to AWS managed (shown as DEFAULT in the AWS console). If enabled is 'true' and no kms_key_arn is specified then SSE is also set to AWS managed (shown as KMS in the AWS console). | bool | true | No |
-| environment | Used for 'Environment' tag. | string | N/A | Yes |
 | hash\_key | Hash key name. | string | N/A | Yes |
 | hash\_key\_attributes | Hash key attributes. | map(string) | {} | No |
 | name | Name of the DynamoDB table to create. Also used for 'Name' tag. | string | N/A | Yes |

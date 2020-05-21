@@ -10,11 +10,6 @@ variable "encryption" {
   type        = bool
 }
 
-variable "environment" {
-  description = "used for 'Environment' tag"
-  type        = string
-}
-
 variable "hash_key" {
   description = "hash key name"
   type        = string
